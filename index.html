@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador Pomodoro</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        #timer {
+            font-size: 36px;
+            margin: 20px;
+        }
+
+        #controls {
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Contador Pomodoro</h1>
+    <div id="timer">25:00</div>
+    <div id="controls">
+        <button onclick="startTimer()">Iniciar</button>
+        <button onclick="stopTimer()">Detener</button>
+        <button onclick="resetTimer()">Reiniciar</button>
+    </div>
+
+    <script>
+        let time = 25 * 60; // 25 minutos en segundos
+        let timerInterval;
+
+        function startTimer() {
+            timerInterval = setInterval(updateTimer, 1000);
+        }
+
+        function stopTimer() {
+            clearInterval(timerInterval);
+        }
+
+        function resetTimer() {
+            stopTimer();
+            time = 25 * 60;
+            updateTimer();
+        }
+
+        function updateTimer() {
+            const minutes = Math.floor(time / 60);
+            const seconds = time % 60;
+            const timerDisplay = document.getElementById("timer");
+            timerDisplay.textContent = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+
+            if (time === 0) {
+                alert("¡Tiempo terminado! Tómate un descanso.");
+                resetTimer();
+            } else {
+                time--;
+            }
+        }
+    </script>
+</body>
+</html>
