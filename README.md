@@ -17,5 +17,5 @@ Este es el código fuente de mi sitio web de portafolio profesional alojado en [
 )](https://github.com/tailwindlabs/tailwindcss)
 
 [![particles.js](https://vincentgarreau.com/particles.js/assets/img/particlesjs-og.png)
-)](https://github.com/VincentGarreau/particles.js/)
+](https://github.com/VincentGarreau/particles.js/)
 
