@@ -80,13 +80,13 @@ function ChangePage(page) {
 
     if(currentpage == 0)
     {
-        image.attr("src", "img/construction.jpg");
+        image.attr("src", "img/pomodoro.png");
         console.log("updated image to : " + currentpage);
-        title.innerHTML = `<span class="bg-yellow-100 text-yellow-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-yellow-900 dark:text-yellow-300">Most Popular</span>Ejemplo 1`;
+        title.innerHTML = `<span class="bg-yellow-100 text-yellow-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-yellow-900 dark:text-yellow-300">Most Popular</span>Pomodoro`;
         contect.innerHTML = `<span style="color: white; font-size: 20px;"><br> Overview: </span><br>
           
-        Texto de Prueba 1.</p>`
-        link.attr("href", "https://github.com/PlacidoDiaz");
+        Este es un simple contador Pomodoro que puede ser personalizado y utilizado para administrar <br> tu tiempo de trabajo de acuerdo con la técnica Pomodoro.</p>`
+        link.attr("href", "https://github.com/PlacidoDiaz/Pomodoro");
     }
     else if(currentpage == 1){
       image.attr("src", "img/construction.jpg");
